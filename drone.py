@@ -23,7 +23,7 @@ class Drone(object):
         print("send message "+ TelloMessage +" end")
         msg = TelloMessage.encode(encoding="utf-8")
         sent = self.sock.sendto(msg,self.tello_address)
-        data, server = self.sock.recvfrcd om(1518)
+        data, server = self.sock.recvfrom(1518)
         #print("returværdi")
         print(data.decode(encoding="utf-8"))
         return "from sendmessage " + TelloMessage + " end "
